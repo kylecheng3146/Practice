@@ -1,5 +1,8 @@
 package com.example.practice
 
+import android.util.Log
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -11,7 +14,10 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun test() {
+        val  practice = Practice()
+        practice.exampleLaunchCoroutineScope()
     }
+
+
 }
