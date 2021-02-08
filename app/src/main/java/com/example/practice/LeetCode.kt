@@ -2,6 +2,7 @@ package com.example.practice
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import java.lang.StringBuilder
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -58,5 +59,25 @@ class LeetCode {
             }
         }
         return result
+    }
+
+    /*
+    * 1678. Goal Parser Interpretation
+    * */
+    fun interpret(command: String): String {
+        val tempResult = StringBuilder()
+        command.toCharArray().forEachIndexed { index, c ->
+            if(c == 'G')
+                tempResult.append(c)
+
+            if(c == '(' && command[index+1] == 'a'){
+                tempResult.append("al")
+            }
+
+            if(c == '(' && command[index+1] == ')'){
+                tempResult.append("o")
+            }
+        }
+        return tempResult.toString()
     }
 }
