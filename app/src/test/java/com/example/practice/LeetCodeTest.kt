@@ -37,4 +37,16 @@ class LeetCodeTest {
         accounts.add(intArrayOf(1,9,5))
         leetCode.maximumWealth(accounts)
     }
+
+    @Test
+    fun interpret(){
+        leetCode.interpret("(al)G(al)()()G")
+    }
+
+    @Test
+    fun numIdenticalPairs(){
+//        leetCode.numIdenticalPairs(intArrayOf(1,2,3,1,1,3))
+//        leetCode.numIdenticalPairs(intArrayOf(1,1,1,1))
+        leetCode.numIdenticalPairs(intArrayOf(1,2,3))
+    }
 }

@@ -67,8 +67,9 @@ class LeetCode {
     fun interpret(command: String): String {
         val tempResult = StringBuilder()
         command.toCharArray().forEachIndexed { index, c ->
-            if(c == 'G')
+            if(c == 'G'){
                 tempResult.append(c)
+            }
 
             if(c == '(' && command[index+1] == 'a'){
                 tempResult.append("al")
@@ -79,5 +80,27 @@ class LeetCode {
             }
         }
         return tempResult.toString()
+    }
+
+    /**
+     * 1512. Number of Good Pairs
+     * */
+    fun numIdenticalPairs(nums: IntArray): Int {
+        var result = 0
+        var index = 0
+        var tempIndex = 0
+        while (tempIndex < nums.size){
+            val tempNum = nums[tempIndex]
+            while (index < nums.size){
+                val num = nums[index]
+                if(num == tempNum && index > tempIndex){
+                    result ++
+                }
+                index++
+            }
+            tempIndex++
+            index = tempIndex
+        }
+        return result
     }
 }
