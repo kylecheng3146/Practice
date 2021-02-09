@@ -49,4 +49,15 @@ class LeetCodeTest {
 //        leetCode.numIdenticalPairs(intArrayOf(1,1,1,1))
         leetCode.numIdenticalPairs(intArrayOf(1,2,3))
     }
+
+    @Test
+    fun test() {
+        var obj = PeekingIterator(listOf(1,2,3,4).iterator())
+        obj.hasNext()
+
+        obj.next()
+        obj.peek()
+        obj.next()
+        obj.hasNext()
+    }
 }

@@ -104,3 +104,34 @@ class LeetCode {
         return result
     }
 }
+
+/**
+ * 284. Peeking Iterator
+ * */
+class PeekingIterator(iterator:Iterator<Int>):Iterator<Int> {
+    val arr = iterator
+    var peek = false
+    var result = 0
+    fun peek(): Int {
+        if (arr.hasNext() && !peek){
+            result = arr.next()
+        }
+        peek = true
+        return result
+    }
+
+    override fun next(): Int {
+        if(peek){
+            peek = false
+            return result
+        }else {
+            result = arr.next()
+        }
+        return result
+    }
+
+    override fun hasNext(): Boolean {
+        val result = arr.hasNext()
+        return result
+    }
+}
