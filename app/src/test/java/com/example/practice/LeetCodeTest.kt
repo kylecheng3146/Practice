@@ -60,4 +60,9 @@ class LeetCodeTest {
         obj.next()
         obj.hasNext()
     }
+
+    @Test
+    fun smallerNumbersThanCurrent() {
+        leetCode.smallerNumbersThanCurrent(intArrayOf(8,1,2,2,3))
+    }
 }

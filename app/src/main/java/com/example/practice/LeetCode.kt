@@ -103,6 +103,29 @@ class LeetCode {
         }
         return result
     }
+
+    /**
+     * 1365. How Many Numbers Are Smaller Than the Current Number
+     * */
+    fun smallerNumbersThanCurrent(nums: IntArray): IntArray {
+        var result = IntArray(nums.size)
+        var tempResult = 0
+        var i = 0
+        var j = 0;
+        while (i < nums.size){
+           while (j < nums.size){
+               if(nums[i] > nums[j]){
+                   tempResult ++
+               }
+               j++
+           }
+            result[i] = tempResult
+            tempResult = 0
+            j = 0
+            i++
+        }
+        return  result
+    }
 }
 
 /**
