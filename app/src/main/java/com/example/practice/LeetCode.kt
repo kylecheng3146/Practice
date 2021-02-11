@@ -3,6 +3,7 @@ package com.example.practice
 import android.os.Build
 import androidx.annotation.RequiresApi
 import java.lang.StringBuilder
+import java.lang.reflect.Array
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -125,6 +126,27 @@ class LeetCode {
             i++
         }
         return  result
+    }
+
+    /**
+     * 242. Valid Anagram
+     * */
+    fun isAnagram(s: String, t: String): Boolean {
+        if(s == "" && t == "")
+            return true
+
+        if(s.length != t.length)
+            return false
+
+        val sa = s.toCharArray()
+        val ta = t.toCharArray()
+        Arrays.sort(sa)
+        Arrays.sort(ta)
+        sa.forEachIndexed { index, c ->
+            if(c != ta[index])
+                return false
+        }
+        return true
     }
 }
 

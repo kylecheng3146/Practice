@@ -65,4 +65,12 @@ class LeetCodeTest {
     fun smallerNumbersThanCurrent() {
         leetCode.smallerNumbersThanCurrent(intArrayOf(8,1,2,2,3))
     }
+
+    @Test
+    fun isAnagram() {
+//        leetCode.isAnagram("rat","car")
+//        leetCode.isAnagram("anagram","nagaram")
+//        leetCode.isAnagram("ac","ba")
+        leetCode.isAnagram("a","ab")
+    }
 }
