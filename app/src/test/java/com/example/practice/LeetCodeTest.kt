@@ -73,4 +73,11 @@ class LeetCodeTest {
 //        leetCode.isAnagram("ac","ba")
         leetCode.isAnagram("a","ab")
     }
+
+    @Test
+    fun isValid() {
+//        leetCode.isValid("()[]{}")
+//        leetCode.isValid("([)]")
+        leetCode.isValid("()")
+    }
 }

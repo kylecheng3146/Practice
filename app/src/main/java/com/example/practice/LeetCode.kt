@@ -148,6 +148,30 @@ class LeetCode {
         }
         return true
     }
+
+    /*
+    * 20. Valid Parentheses
+    * */
+    fun isValid(s: String): Boolean {
+        val stack:Deque<String> = ArrayDeque()
+        s.toCharArray().forEach {
+            when {
+                it == '(' ->
+                    stack.add(")")
+                it == '[' ->
+                    stack.add("]")
+                it == '{' ->
+                    stack.add("}")
+                else -> {
+                    val temp = stack.pollLast()
+                    if (temp != it.toString()){
+                        return  false
+                    }
+                }
+            }
+        }
+        return stack.size == 0
+    }
 }
 
 /**
