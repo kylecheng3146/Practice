@@ -80,4 +80,10 @@ class LeetCodeTest {
 //        leetCode.isValid("([)]")
         leetCode.isValid("()")
     }
+
+    @Test
+    fun largestAltitude() {
+//        leetCode.largestAltitude(intArrayOf(-5,1,5,0,-7))
+        leetCode.largestAltitude(intArrayOf(-4,-3,-2,-1,4,3,2))
+    }
 }

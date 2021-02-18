@@ -2,10 +2,7 @@ package com.example.practice
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import java.lang.StringBuilder
-import java.lang.reflect.Array
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 /**
@@ -172,6 +169,23 @@ class LeetCode {
         }
         return stack.size == 0
     }
+
+    /**
+     * 1732. Find the Highest Altitude
+     * gain = [-5,1,5,0,-7]
+     * */
+    fun largestAltitude(gain: IntArray): Int {
+        var largest = 0
+        var tempLargest = 0
+        gain.forEachIndexed { index, i ->
+            tempLargest = tempLargest + i
+            if(tempLargest > largest) {
+                largest = tempLargest
+            }
+        }
+        return largest
+    }
+
 }
 
 /**
