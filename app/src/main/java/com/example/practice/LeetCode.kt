@@ -3,6 +3,8 @@ package com.example.practice
 import android.os.Build
 import androidx.annotation.RequiresApi
 import java.util.*
+import kotlin.collections.HashMap
+import kotlin.collections.HashSet
 
 
 /**
@@ -177,13 +179,37 @@ class LeetCode {
     fun largestAltitude(gain: IntArray): Int {
         var largest = 0
         var tempLargest = 0
-        gain.forEachIndexed { index, i ->
-            tempLargest = tempLargest + i
+        gain.forEach {
+            tempLargest = tempLargest + it
             if(tempLargest > largest) {
                 largest = tempLargest
             }
         }
         return largest
+    }
+
+    /**
+     * 1748. Sum of Unique Elements
+     * */
+    fun sumOfUnique(nums: IntArray): Int {
+        var result = 0
+        val hashMap = HashMap<Int,Int>()
+        nums.forEach {
+            if(hashMap.get(it) == null){
+                hashMap.put(it, 1)
+            }else{
+                var value = hashMap.get(it)
+                if (value != null) {
+                    hashMap.put(it, value+1)
+                }
+            }
+        }
+        hashMap.forEach {
+            if(it.value == 1){
+                result += it.key
+            }
+        }
+        return result
     }
 
 }

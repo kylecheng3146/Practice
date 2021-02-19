@@ -86,4 +86,9 @@ class LeetCodeTest {
 //        leetCode.largestAltitude(intArrayOf(-5,1,5,0,-7))
         leetCode.largestAltitude(intArrayOf(-4,-3,-2,-1,4,3,2))
     }
+    @Test
+    fun sumOfUnique() {
+//        leetCode.largestAltitude(intArrayOf(-5,1,5,0,-7))
+        leetCode.sumOfUnique(intArrayOf(10,6,9,6,9,6,8,7))
+    }
 }
