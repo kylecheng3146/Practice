@@ -91,4 +91,10 @@ class LeetCodeTest {
 //        leetCode.largestAltitude(intArrayOf(-5,1,5,0,-7))
         leetCode.sumOfUnique(intArrayOf(10,6,9,6,9,6,8,7))
     }
+
+    @Test
+    fun numberOfMatches() {
+//        leetCode.largestAltitude(intArrayOf(-5,1,5,0,-7))
+        leetCode.numberOfMatches(14)
+    }
 }

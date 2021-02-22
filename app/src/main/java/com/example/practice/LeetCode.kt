@@ -212,6 +212,24 @@ class LeetCode {
         return result
     }
 
+    /**
+     * 1688. Count of Matches in Tournament
+     * */
+    fun numberOfMatches(n: Int): Int {
+        var result = 0
+        var totalMatch = n
+        var tempMatch = 0
+        while(totalMatch != 1) {
+            if(totalMatch % 2 != 0) {
+                tempMatch = (totalMatch - 1) / 2
+            }else{
+                tempMatch = totalMatch / 2
+            }
+            totalMatch -= tempMatch
+            result += tempMatch
+        }
+        return result
+    }
 }
 
 /**
