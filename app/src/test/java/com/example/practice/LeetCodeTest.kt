@@ -97,4 +97,11 @@ class LeetCodeTest {
 //        leetCode.largestAltitude(intArrayOf(-5,1,5,0,-7))
         leetCode.numberOfMatches(14)
     }
+
+    @Test
+    fun busyStudent() {
+        leetCode.busyStudent(intArrayOf(9,8,7,6,5,4,3,2,1),intArrayOf(10,10,10,10,10,10,10,10,10),5)
+//        leetCode.busyStudent(intArrayOf(4),intArrayOf(4),5)
+//        leetCode.busyStudent(intArrayOf(16),intArrayOf(60),58)
+    }
 }

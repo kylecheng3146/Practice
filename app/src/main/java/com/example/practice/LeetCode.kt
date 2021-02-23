@@ -230,6 +230,21 @@ class LeetCode {
         }
         return result
     }
+
+    /**
+     * 1450. Number of Students Doing Homework at a Given Time
+     * */
+    fun busyStudent(startTime: IntArray, endTime: IntArray, queryTime: Int): Int {
+        var result = 0
+        var i = 0
+        while (i < startTime.size){
+            if(queryTime in startTime[i] .. endTime[i])
+                result++
+
+            i++
+        }
+        return result
+    }
 }
 
 /**
