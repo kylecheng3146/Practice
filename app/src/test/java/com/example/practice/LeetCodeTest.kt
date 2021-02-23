@@ -104,4 +104,15 @@ class LeetCodeTest {
 //        leetCode.busyStudent(intArrayOf(4),intArrayOf(4),5)
 //        leetCode.busyStudent(intArrayOf(16),intArrayOf(60),58)
     }
+
+    @Test
+    fun searchMatrix() {
+        val array = arrayListOf<IntArray>()
+        array.add(intArrayOf(2,8,7))
+        array.add(intArrayOf(7,1,3))
+        array.add(intArrayOf(1,9,5))
+        leetCode.searchMatrix(array,5)
+//        leetCode.busyStudent(intArrayOf(4),intArrayOf(4),5)
+//        leetCode.busyStudent(intArrayOf(16),intArrayOf(60),58)
+    }
 }

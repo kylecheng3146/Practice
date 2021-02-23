@@ -3,8 +3,8 @@ package com.example.practice
 import android.os.Build
 import androidx.annotation.RequiresApi
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
-import kotlin.collections.HashSet
 
 
 /**
@@ -244,6 +244,19 @@ class LeetCode {
             i++
         }
         return result
+    }
+
+    /**
+     * 240. Search a 2D Matrix II
+     * */
+    fun searchMatrix(matrix: ArrayList<IntArray>, target: Int): Boolean {
+        matrix.forEach {
+            it.forEach {
+                if(it == target)
+                    return true
+            }
+        }
+        return false
     }
 }
 
