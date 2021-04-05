@@ -117,4 +117,9 @@ class LeetCodeTest {
 //        leetCode.busyStudent(intArrayOf(4),intArrayOf(4),5)
 //        leetCode.busyStudent(intArrayOf(16),intArrayOf(60),58)
     }
+
+    @Test
+    fun shuffleTheArray() {
+        leetCode.shuffleTheArray(intArrayOf(2,5,1,3,4,7),3)
+    }
 }

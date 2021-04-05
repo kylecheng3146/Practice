@@ -264,6 +264,24 @@ class LeetCode {
         }
         return false
     }
+
+    fun shuffleTheArray(nums: IntArray, n: Int): IntArray {
+        var result = IntArray(nums.size)
+        var first = 0
+        var target = n
+        var index = 0
+
+        while (first < n) {
+            result.set(index,nums[first])
+            index +=1
+            first+=1
+            result.set(index,nums[target])
+            target+=1
+            index+=1
+        }
+
+        return result
+    }
 }
 
 /**
