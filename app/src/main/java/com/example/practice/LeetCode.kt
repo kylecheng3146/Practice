@@ -272,15 +272,30 @@ class LeetCode {
         var index = 0
 
         while (first < n) {
-            result.set(index,nums[first])
-            index +=1
-            first+=1
-            result.set(index,nums[target])
-            target+=1
-            index+=1
+            result.set(index, nums[first])
+            index += 1
+            first += 1
+            result.set(index, nums[target])
+            target += 1
+            index += 1
         }
 
         return result
+    }
+
+    /**
+     * 1. Two Sum
+     * */
+    fun twoSum(nums: IntArray, target: Int): IntArray {
+        val hashMap:HashMap<Int,Int> = HashMap()
+        nums.forEachIndexed { index, i ->
+            val targetMap = target - i
+            if (hashMap.containsKey(targetMap)) {//比對Map
+                return intArrayOf(hashMap[targetMap]!!, index) //如果比對成功表示相加等同Target
+            }
+            hashMap.put(nums[index],index)
+        }
+        return intArrayOf(0, 0)
     }
 }
 

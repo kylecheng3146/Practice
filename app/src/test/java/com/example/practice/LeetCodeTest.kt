@@ -122,4 +122,10 @@ class LeetCodeTest {
     fun shuffleTheArray() {
         leetCode.shuffleTheArray(intArrayOf(2,5,1,3,4,7),3)
     }
+    
+    @Test
+    fun twoSum() {
+        val nums: IntArray = intArrayOf(1,2,3,4)
+        leetCode.twoSum(nums,5)
+    }
 }
