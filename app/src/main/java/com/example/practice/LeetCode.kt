@@ -297,6 +297,27 @@ class LeetCode {
         }
         return intArrayOf(0, 0)
     }
+
+    /**
+     * 9. Palindrome Number
+     * */
+    fun isPalindrome(x: Int): Boolean {
+        val arrays = x.toString().toCharArray()
+        var first = 0
+        var last = arrays.size - 1
+
+        for(i in first .. last) {
+            if(arrays[first] != arrays[last])
+                return false
+
+            if(first == last)
+                return true
+
+            first++
+            last --
+        }
+        return true
+    }
 }
 
 /**

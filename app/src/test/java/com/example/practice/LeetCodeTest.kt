@@ -128,4 +128,9 @@ class LeetCodeTest {
         val nums: IntArray = intArrayOf(1,2,3,4)
         leetCode.twoSum(nums,5)
     }
+
+    @Test
+    fun isPalindrome() {
+        leetCode.isPalindrome(12321)
+    }
 }
