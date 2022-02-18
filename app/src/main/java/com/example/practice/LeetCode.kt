@@ -335,6 +335,20 @@ class LeetCode {
         }
         return lastIndex
     }
+
+    /**
+     * 27. Remove Element
+     * */
+    fun removeElement(nums: IntArray, removeValue: Int): Int {
+        if(nums.isEmpty()) return 0
+        var result = 0
+        nums.forEachIndexed { i, _ ->
+            if(nums[i] != removeValue){
+                nums[result++] = nums[i]
+            }
+        }
+        return result
+    }
 }
 
 /**

@@ -139,4 +139,10 @@ class LeetCodeTest {
        val nums :IntArray = intArrayOf(0,0,1,1,1,2,2,3,3,4)
         assert(leetCode.removeDuplicates(nums) == 5)
     }
+
+    @Test
+    fun removeElement() {
+       val nums :IntArray = intArrayOf(0,1,2,2,3,0,4,2)
+        assert(leetCode.removeElement(nums,2) == 5)
+    }
 }
