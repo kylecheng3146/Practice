@@ -133,4 +133,10 @@ class LeetCodeTest {
     fun isPalindrome() {
         leetCode.isPalindrome(12321)
     }
+
+    @Test
+    fun removeDuplicates() {
+       val nums :IntArray = intArrayOf(0,0,1,1,1,2,2,3,3,4)
+        assert(leetCode.removeDuplicates(nums) == 5)
+    }
 }

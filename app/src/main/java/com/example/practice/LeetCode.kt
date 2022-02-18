@@ -318,6 +318,23 @@ class LeetCode {
         }
         return true
     }
+    /**
+     * 26. Remove Duplicates from Sorted Array
+     * */
+    fun removeDuplicates(nums: IntArray): Int {
+        if (nums.isEmpty()) return 0
+        var lastIndex = 1
+        var curVal = nums[0]
+        nums.forEachIndexed{ index, i ->
+            if(nums[index] > curVal) {
+                curVal = nums[index]
+                nums[lastIndex] = curVal
+
+                lastIndex++
+            }
+        }
+        return lastIndex
+    }
 }
 
 /**
