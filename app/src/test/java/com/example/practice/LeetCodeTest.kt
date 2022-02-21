@@ -145,4 +145,10 @@ class LeetCodeTest {
        val nums :IntArray = intArrayOf(0,1,2,2,3,0,4,2)
         assert(leetCode.removeElement(nums,2) == 5)
     }
+
+    @Test
+    fun majorityElement() {
+       val nums :IntArray = intArrayOf(2,2,1,1,1,2,2)
+        assert(leetCode.majorityElement(nums) == 3)
+    }
 }

@@ -349,6 +349,29 @@ class LeetCode {
         }
         return result
     }
+
+    /**
+     * 169. Majority Element
+     * */
+    fun majorityElement(nums: IntArray): Int {
+
+        val majority = nums.size / 2
+        val hashMap = mutableMapOf<Int,Int>()
+        nums.forEachIndexed { index, i ->
+            if(hashMap.containsKey(i)){
+                hashMap.put(i, hashMap.get(i)!!+1)
+                return@forEachIndexed
+            }
+
+            hashMap.put(i, 1)
+        }
+
+        for ((key, value) in hashMap) {
+            if (value > majority) return key
+        }
+
+        return 0
+    }
 }
 
 /**
