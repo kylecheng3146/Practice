@@ -372,6 +372,47 @@ class LeetCode {
 
         return 0
     }
+
+    /**
+     * 28. Implement strStr()
+     * */
+    fun strStr(haystack: String, needle: String): Int {
+        if(haystack.length == 0 && needle.length > 0) return -1
+        if(haystack.length == 0) return 0
+        var firstC = 0
+        var result = 0
+        haystack.forEachIndexed { index, c ->
+            if(c == needle.get(firstC)){
+                if(result == 0)
+                    result = index
+
+                firstC ++
+            }else{
+                firstC = 0
+            }
+
+            if(firstC == needle.length)
+                return result
+        }
+        return -1
+    }
+
+    /**
+     * 344. Reverse String
+     * Write a function that reverses a string. The input string is given as an array of characters s.
+       You must do this by modifying the input array in-place with O(1) extra memory.
+     * Input: s = ["h","e","l","l","o"]
+       Output: ["o","l","l","e","h"]
+     * */
+    fun reverseString(s: CharArray): CharArray {
+        val result = CharArray(s.size)
+        var index = s.size - 1
+        s.forEachIndexed { i, c ->
+            result[index] = c
+            index--
+        }
+        return result
+    }
 }
 
 /**

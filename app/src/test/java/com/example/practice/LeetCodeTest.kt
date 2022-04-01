@@ -151,4 +151,14 @@ class LeetCodeTest {
        val nums :IntArray = intArrayOf(2,2,1,1,1,2,2)
         assert(leetCode.majorityElement(nums) == 3)
     }
+
+    @Test
+    fun strStr() {
+        leetCode.strStr("","a")
+    }
+
+    @Test
+    fun reverseString() {
+        leetCode.reverseString(charArrayOf('h', 'e', 'l', 'l', 'o'))
+    }
 }
