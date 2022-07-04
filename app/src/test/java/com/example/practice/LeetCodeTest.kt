@@ -161,4 +161,10 @@ class LeetCodeTest {
     fun reverseString() {
         leetCode.reverseString(charArrayOf('h', 'e', 'l', 'l', 'o'))
     }
+
+    @Test
+    fun searchInsert() {
+        val nums :IntArray = intArrayOf(1,3,5,6)
+        leetCode.searchInsert(nums,5)
+    }
 }
