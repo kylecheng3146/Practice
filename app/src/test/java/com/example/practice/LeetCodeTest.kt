@@ -167,4 +167,9 @@ class LeetCodeTest {
         val nums :IntArray = intArrayOf(1,3,5,6)
         leetCode.searchInsert(nums,5)
     }
+
+    @Test
+    fun lengthOfLastWord() {
+        leetCode.lengthOfLastWord("   fly me   to   the moon  ")
+    }
 }
